@@ -31,7 +31,7 @@ class UserController extends Controller
                     'password' => bcrypt($request->input('password')),
                 ]);
                 $user->save();
-                return response()->json(['status' => true, 'Great thanks'],200);
+                return response()->json(['status' => true, 'Great thanks'],201);
             }
 
             return response()->json(['Permiso no autorizado'],401);
